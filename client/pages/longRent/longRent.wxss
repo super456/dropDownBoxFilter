@@ -1,0 +1,283 @@
+/* 下拉筛选框 */
+
+.page {
+  font-family: 'PingFang SC',
+                 'Helvetica Neue',
+                 Helvetica,
+                 'Droid Sans Fallback',
+                 'Microsoft Yahei',
+                 sans-serif;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.nav {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  border-bottom: 1rpx solid #f4f4f4;
+  background: #fff;
+}
+
+.nav-son {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.borders {
+  border-left: 1rpx solid #f4f4f4;
+  border-right: 1rpx solid #f4f4f4;
+}
+
+.content {
+  display: inline-block;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.icon {
+  display: inline-block;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #666;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.temp {
+  position: relative;
+  z-index: 4;
+  background: #fff;
+}
+
+.temp1 {
+  display: none;
+  width: 100%;
+  max-height: 550rpx;
+  overflow-y: scroll;
+  line-height: 100rpx;
+}
+
+.temp2 {
+  display: none;
+  width: 100%;
+  max-height: 750rpx;
+  overflow-y: scroll;
+  line-height: 100rpx;
+  background: #fff;
+}
+
+.slidedown {
+  transform: translateY(0%);
+}
+
+.temp view {
+  /* border-bottom: 1rpx solid #d1d3d4; */
+  font-size: 28rpx;
+  color: #666;
+}
+
+.pxTable {
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.quyu {
+  position: relative;
+  /* 区域的筛选：默认状态下不显示 */
+  display: none;
+  /* height: 450rpx; */
+  height: 800rpx;
+  z-index: 5;
+}
+
+.quyu .qy {
+  overflow-y: scroll;
+  float: left;
+  width: 33.33%;
+  /* height: 450rpx; */
+  height: 82%;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #717273;
+  border-right: 1rpx solid #f4f4f4;
+}
+
+.qy view {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 45rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.quyu-left {
+  background: #fff;
+}
+
+.quyu-center {
+  background: #fff;
+}
+
+.quyu-right {
+  background: #f5f5f5;
+}
+
+.quyu-right view {
+  border-bottom: 1rpx solid #efefef;
+  display: flex;
+  align-items: center;
+}
+
+.quyu-right image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 30rpx;
+}
+
+.current {
+  /* background: #e0e0e0; */
+  color: #ec603d;
+}
+
+.current2 {
+  /* background: #fff; */
+  color: #ec603d;
+}
+
+.current3 {
+  /* background: #fff; */
+  color: #ec603d;
+}
+
+.fullbg {
+  position: fixed;
+  top: 132rpx;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgb(1, 1, 1);
+  transition: all 2s;
+  opacity: 0;
+}
+
+.fullopacity {
+  opacity: 0.5;
+}
+
+.nav-son.active .content {
+  color: #1d57a0;
+}
+
+.nav-son.active .icon {
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #1d57a0;
+}
+
+@keyframes slidown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.slidown {
+  display: block;
+  animation: slidown 0.7s ease-in both;
+}
+
+@keyframes slidup {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.slidup {
+  display: block;
+  animation: slidup 0.7s ease-in both;
+}
+
+.disappear {
+  display: none;
+}
+
+button::after {
+  border: none;
+}
+
+button {
+  background-color: red;
+  width: 50%;
+  border-radius: 0;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-btn {
+  width: 100%;
+  display: flex;
+  height: 98rpx;
+}
+
+.btn-reset {
+  background-color: #f9f9f9;
+}
+
+.btn-submit {
+  background-color: #e35b27;
+  color: #fff;
+}
+
+.sliderHView {
+  margin: 0 40rpx 0 40rpx;
+  height: 250rpx;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.valueSty {
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+  margin-top: 15rpx;
+}
+
+.showMoney text {
+  margin-right: 30rpx;
+}
+
+.twoSlider {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentCenter {
+  text-align: center;
+}
+.current4 {
+  /* background: #fff; */
+  color: #ec603d !important;
+
+}
