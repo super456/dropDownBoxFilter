@@ -1,8 +1,11 @@
 下拉菜单很常见，网上也有很多例子，自己也根据网上的资料，仿写了一个。感谢作者[小小小是我](https://blog.csdn.net/laokdidiao/article/details/53565679)提供了资料，在此做了二次开发，也分享一下。因为自己最近也需要写个小程序的下拉框的三级菜单筛选，分享给有需要的人哈。
 ### （一）、实现效果
 1、原作者资料的实现效果：[点击跳转微信小程序仿闲鱼『下拉菜单』](https://blog.csdn.net/laokdidiao/article/details/53565679)
+
 ![原作者实现效果](http://pbr0erxxq.bkt.clouddn.com/2018-08-26/02.gif)
+
 2、自己二次开发实现效果：
+
 ![自己写的下拉框效果](http://pbr0erxxq.bkt.clouddn.com/2018-08-26/01.gif)
 
 ### （二）实现过程
